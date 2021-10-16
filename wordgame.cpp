@@ -17,9 +17,9 @@ int currentDifficulty = 1;
 void wordGame(int difficulty){
 
     srand(time(NULL));
-    int a = rand() % difficulty;
-    int b = rand() % difficulty;
-    int c = rand() % difficulty;
+    int a = rand() % difficulty + 1;
+    int b = rand() % difficulty + 1;
+    int c = rand() % difficulty + 1;
 
     int sum = a + b + c;
     int product = a * b * c;
@@ -29,14 +29,16 @@ void wordGame(int difficulty){
     cout << "The sum of our number: " << sum << endl;
     cout << "The product of our number: " << product << endl;
 
+    cout << "Current code: " << a << " " << b << " X" << endl; 
+
     cout << "Insert the number: ";
     cin >> userInput;
 
-    if(userInput == a){
-        cout << "The code is correct!" << endl;
+    if(userInput == c){
+        cout << "------------The code is correct!------------" << endl << endl << endl;
         currentDifficulty++;
     }else{
-        cout << "The code is incorrect! Restarting the system..." << endl;
+        cout << "The code is incorrect! Restarting the system..." << endl << endl << endl;
         currentDifficulty = 1;
     }
 
