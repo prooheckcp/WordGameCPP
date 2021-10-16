@@ -17,24 +17,24 @@ int currentDifficulty = 1;
 void wordGame(int difficulty){
 
     srand(time(NULL));
-    int a = rand() % difficulty + 1;
-    int b = rand() % difficulty + 1;
-    int c = rand() % difficulty + 1;
+    int CodeA = rand() % difficulty + 1;
+    int CodeB = rand() % difficulty + 1;
+    int CodeC = rand() % difficulty + 1;
 
-    int sum = a + b + c;
-    int product = a * b * c;
+    int CodeSum = CodeA + CodeB + CodeC;
+    int CodeProduct = CodeA * CodeB * CodeC;
 
     int userInput;
 
-    cout << "The sum of our number: " << sum << endl;
-    cout << "The product of our number: " << product << endl;
+    cout << "The sum of our number: " << CodeSum << endl;
+    cout << "The product of our number: " << CodeProduct << endl;
 
-    cout << "Current code: " << a << " " << b << " X" << endl; 
+    cout << "Current code: " << CodeA << " " << CodeB << " X" << endl; 
 
     cout << "Insert the number: ";
     cin >> userInput;
 
-    if(userInput == c){
+    if(userInput == CodeC){
         cout << "------------The code is correct!------------" << endl << endl << endl;
         currentDifficulty++;
     }else{
