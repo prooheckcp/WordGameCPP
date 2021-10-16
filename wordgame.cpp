@@ -49,14 +49,19 @@ void wordGame(int difficulty){
 
 }
 
+void InsertIntroduction(){
+    cout << "You are a secret agent trying to break into the Chinese government" << endl;
+    cout << "Enter the correct code to continue" << endl;    
+}
+
 int main(int argc, char const *argv[])
 {
-    
-    cout << "You are a secret agent trying to break into the Chinese government" << endl;
-    cout << "Enter the correct code to continue" << endl;
+    InsertIntroduction();
     
     while(currentDifficulty < MAX_DIFFICULTY){
         wordGame(currentDifficulty);
+        cin.clear();
+        cin.ignore();
     }
 
     cout << "You won the game!" << endl;
