@@ -24,17 +24,22 @@ void wordGame(int difficulty){
     int CodeSum = CodeA + CodeB + CodeC;
     int CodeProduct = CodeA * CodeB * CodeC;
 
-    int userInput;
+    int GuessA, GuessB, GuessC;
 
     cout << "The sum of our number: " << CodeSum << endl;
     cout << "The product of our number: " << CodeProduct << endl;
 
-    cout << "Current code: " << CodeA << " " << CodeB << " X" << endl; 
+    //cout << "Current code: " << CodeA << " " << CodeB << " X" << endl; 
 
     cout << "Insert the number: ";
-    cin >> userInput;
+    cin >> GuessA;
+    cin >> GuessB;
+    cin >> GuessC;
 
-    if(userInput == CodeC){
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+
+    if(GuessSum == CodeSum && GuessProduct == CodeProduct){
         cout << "------------The code is correct!------------" << endl << endl << endl;
         currentDifficulty++;
     }else{
